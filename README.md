@@ -22,3 +22,4 @@ Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 * Install a devDependency to package.json: npm install package --save-dev == yarn add package --dev
 
 * Remove a dependency from package.json: npm uninstall package --save == yarn remove package
+
