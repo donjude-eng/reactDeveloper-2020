@@ -10,8 +10,6 @@ class App extends Component {
             string: 'Hello Don Pulpally'
         };
     }
-
-
   render() {
     return (
       <div className='App'>
