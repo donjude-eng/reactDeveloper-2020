@@ -23,3 +23,23 @@ Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 
 * Remove a dependency from package.json: npm uninstall package --save == yarn remove package
 
+# React App installaton
+* nvm install 12.19.0
+* npx create-reat-app monsterss-rolodex
+
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+
+# Create react App
+`https://create-react-app.dev/docs/getting-started/`
+
+# Bable will help to run the javascript file in all the versions.
+* Build is the folder where the program runs.
+* src is our source file
+
+* index.js >> React library >>allows to write the html syntax inside App.js
+* reactDOm is a little robot from the previous section.
+
+
