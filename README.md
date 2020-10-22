@@ -64,5 +64,102 @@ Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
         </header>
       </div>
 
-````
-# JXS is tryning to mimc what HTML does!
+```
+
+# JXS is trying to mimc what HTML does!
+
+```
+ <header className='App-header'>
+          <img src={logo} className='App-logo' alt='logo' />
+          <p>
+            {this.state.string}
+          </p>
+          <button onClick={() => this.setState({string: 'Hello Sarath'})}> Change Text</button>
+          <button onClick={() => this.setState({string : 'Hello Friend'})}>Second button</button>
+        </header>
+```
+
+# Array methods
+
+1. includes()
+2. map()
+3. filter()
+4. reduce()
+5. find()
+
+# The key will helps react to know which elements is to be updated. So it is important to provide a key in the object.
+
+## Optional map key attribute
+
+```
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: [
+        {
+          name: "Frakerstein",
+          id: "asc1",
+        },
+        {
+          name: "Dracula",
+          id: "asc2",
+        },
+        {
+          name: "Zombie",
+          id: "asc3",
+        },
+      ],
+    };
+  }
+
+  render() {
+    return (
+      <div className='App'>
+        {this.state.monsters.map((monster) => (
+          <h1 key ={monster.id}> {monster.name}</h1>
+        ))}
+      </div>
+    );
+  }
+
+}
+export default App;
+```
+
+- rendrer is comes along with react component
+  \*super() helps us with this by calling REact.Component's constructor()
+
+# ComponentDidMount - to fetch the url
+
+# React
+
+- React library helps to manipulate the DOM efficiently.
+- Asyncronous will happen sometime in the future.Async will wait for complete the task.
+- Props as a parameter in constructor helps to use parameter in state. you canuse this.props inside of a constructor.
+
+# State VS Props
+
+- If the state changed with the `setstate` where the monsters pass down to components will recive new `props` that means the component has to `render()` If that component has a new prop information will pass to other components.
+
+### Each components are the function that is render.
+
+### ALL the components in the setstaate carried out a renedr function.
+
+```
+<input
+          type='search'
+          placeholder='Search monsters'
+          onChange={(e) => {
+            this.setState({ searchField: e.target.value }, () =>
+              console.log(this.state)
+            );
+          }}
+        />
+```
+# .bind is a method to return a new function
