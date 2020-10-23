@@ -34,6 +34,33 @@ Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 - nvm install 12.19.0
 - npx create-reat-app monsterss-rolodex
 
+# Part 1: Create a React App
+
+This section introduces React basics. You will learn how to bootstrap a new React app with the Create React App CLI. In subsequent parts of the tutorial, you will gradually add new cloud functionality to your application.
+
+> If you want to integrate Amplify Framework into an existing React application, you can skip Part 1 and start directly to Part 2.
+
+### Install the Create React App CLI and Create a New Project
+The easiest way to create an React application is with the Create React App Command Line Interface (CLI). To install the CLI, run the following command in your terminal:
+
+```sh
+$ npm install -g create-react-app
+```
+
+After the installation, go to a location where you wish to start your new application project and execute the following command to create a new React app:
+
+```sh
+$ create-react-app amplify-notes
+```
+
+### Install Amplify Framework Libraries
+
+Now, you have a new React project called react-notes! You can switch to your project’s root folder and install required Amplify Framework libraries.
+
+```sh
+$ cd react-notes
+```
+
   "start": "react-scripts start",
   "build": "react-scripts build",
   "test": "react-scripts test",
