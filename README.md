@@ -190,3 +190,60 @@ export default App;
         />
 ```
 # .bind is a method to return a new function
+
+# setState()
+
+* The primary way that you make UI updates to your React applications is through a call to the setState() function.
+This function will perform a shallow merge between the new state that you provide and the previous state, and will
+trigger a re-render of your component and all decedents.
+
+# Parameters
+1.  updater: It can be an object with a number of key-value pairs that should be merged into the state or a
+function that returns such an object.
+
+2. callback (optional): a function which will be executed after setState() has been executed successfully.
+Due to the fact that calls to setState() are not guaranteed by React to be atomic, this can sometimes be
+useful if you want to perform some action after you are positive that setState() has been executed
+successfully.
+
+# Usage:
+The setState method accepts an updater argument that can either be an object with a number of key-value-pairs
+that should be merged into the state, or a function that returns such an object computed from prevState and
+props.
+
+# Props in React
+
+* props are used to pass data and methods from a parent component to a child component.
+Interesting things about props
+1. They are immutable.
+2. They allow us to create reusable components.
+
+```
+class Parent extends React.Component{
+ doSomething(){
+ console.log("Parent component");
+ }
+ render() {
+ return <div>
+ <Child
+ text="This is the child number 1"
+ title="Title 1"
+ onClick={this.doSomething} />
+ <Child
+ text="This is the child number 2"
+ title="Title 2"
+ onClick={this.doSomething} />
+ </div>
+ }
+}
+class Child extends React.Component{
+ render() {
+ return <div>
+ <h1>{this.props.title}</h1>
+ <h2>{this.props.text}</h2>
+ </div>
+ }
+}
+```
+
+
