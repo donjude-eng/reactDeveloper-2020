@@ -218,8 +218,8 @@ Interesting things about props
 1. They are immutable.
 2. They allow us to create reusable components.
 
-```
-class Parent extends React.Component{
+
+```class Parent extends React.Component{
  doSomething(){
  console.log("Parent component");
  }
@@ -243,7 +243,7 @@ class Child extends React.Component{
  <h2>{this.props.text}</h2>
  </div>
  }
-}
-```
+}```
+
 
 
