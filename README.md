@@ -34,6 +34,49 @@ Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 - nvm install 12.19.0
 - npx create-reat-app monsterss-rolodex
 
+
+# React Component Container
+```When building a React application, it is often desirable to divide components based on their primary responsibility,
+into Presentational and Container components.
+Presentational components are concerned only with displaying data - they can be regarded as, and are often
+implemented as, functions that convert a model to a view. Typically they do not maintain any internal state.
+Container components are concerned with managing data. This may be done internally through their own state, or
+by acting as intermediaries with a state-management library such as Redux. The container component will not
+directly display data, rather it will pass the data to a presentational component.```
+
+#  Container component
+import React, { Component } from 'react';
+import Api from 'path/to/api';
+class CommentsListContainer extends Component {
+constructor() {
+super();
+// Set initial state
+this.state = { comments: [] }
+}
+componentDidMount() {
+// Make API call and update state with returned comments
+Api.getComments().then(comments => this.setState({ comments }));
+}
+render() {
+// Pass our state comments to the presentational component
+return (
+<CommentsList comments={this.state.comments} />;
+);
+}
+}
+// Presentational Component
+const CommentsList = ({ comments }) => (
+<div>
+{comments.map(comment => (
+<div>{comment}</div>
+)}
+</div>
+);
+GoalKicker.com – React JS Notes for Professionals 41
+CommentsList.propTypes = {
+comments: React.PropTypes.arrayOf(React.PropTypes.string)
+}
+
 # Part 1: Create a React App
 
 This section introduces React basics. You will learn how to bootstrap a new React app with the Create React App CLI. In subsequent parts of the tutorial, you will gradually add new cloud functionality to your application.
