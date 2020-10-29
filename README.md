@@ -326,7 +326,7 @@ const CommentsList = ({ comments }) => (
 )}
 </div>
 );
-GoalKicker.com – React JS Notes for Professionals 41
+# GoalKicker.com – React JS Notes for Professionals 41
 CommentsList.propTypes = {
 comments: React.PropTypes.arrayOf(React.PropTypes.string)
 }
