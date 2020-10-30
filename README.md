@@ -295,7 +295,8 @@ Presentational components are concerned only with displaying data - they can be 
 implemented as, functions that convert a model to a view. Typically they do not maintain any internal state.
 Container components are concerned with managing data. This may be done internally through their own state, or
 by acting as intermediaries with a state-management library such as Redux. The container component will not
-directly display data, rather it will pass the data to a presentational component.```
+directly display data, rather it will pass the data to a presentational component.
+```
 
 # Container component
 
@@ -330,6 +331,63 @@ const CommentsList = ({ comments }) => (
 CommentsList.propTypes = {
 comments: React.PropTypes.arrayOf(React.PropTypes.string)
 }
+
+# Basic Component
+* Given the following HTML file:
+* index.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>React Tutorial</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+<script type="text/babel" src="scripts/example.js"></script>
+</body>
+</html>
+You can create a basic component using the following code in a separate file:
+
+# scripts/example.js
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+class FirstComponent extends Component {
+render() {
+return (
+<div className="firstComponent">
+Hello, world! I am a FirstComponent.
+</div>
+);
+}
+}
+ReactDOM.render(
+<FirstComponent />, // Note that this is the same as the variable you stored above
+document.getElementById('content')
+);
+You will get the following result (note what is inside of div#content):
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+GoalKicker.com – React JS Notes for Professionals 14
+<title>React Tutorial</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+</head>
+<body>
+<div id="content">
+<div className="firstComponent">
+Hello, world! I am a FirstComponent.
+</div>
+</div>
+<script type="text/babel" src="scripts/example.js"></script>
+</body>
+```
 
 
 
