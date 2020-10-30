@@ -335,7 +335,8 @@ comments: React.PropTypes.arrayOf(React.PropTypes.string)
 # Basic Component
 * Given the following HTML file:
 * index.html
-``
+
+```
 <!DOCTYPE html>
 <html>
 <head>
