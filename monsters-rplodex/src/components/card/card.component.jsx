@@ -12,3 +12,5 @@ export const Card = (props) => (
     <p>{props.monster.email}</p>
   </div>
 );
+
+
